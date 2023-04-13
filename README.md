@@ -18,7 +18,8 @@ Before getting started, you will need to have the following installed on your sy
 ## Usage
 + Clone this repository to your local machine.
 + Navigate to the directory where the cloned repository is located.
-+ Open the .tf files and make any necessary modifications to the Docker container configurations.
++ Open the .tf files and make any necessary modifications to the Docker container configurations. In this example, we have included configurations for two containers: nginx and webserver.
+
 + To access the Nginx container, open your browser and navigate to http://localhost:8080. You should see the Nginx welcome page.
 
 ![Alt text](Media/Screenshot%202023-04-13%20073927.png)
@@ -33,6 +34,7 @@ The .tf files contain the Terraform configuration for deploying the Docker conta
 + `docker_image.nginx`: This resource defines the nginx Docker image to use for the nginx container.
 + `docker_container.nginx`: This resource defines the nginx container, using the nginx image and exposing port 8080 to the host machine.
 + `docker_image.ubuntu`: This resource defines the ubuntu Docker image to use for the webserver container.
++ `docker_container.webserver`: This resource defines the webserver container, using the ubuntu image and exposing all ports to the host machine.
 
 
 ## Conclusion
